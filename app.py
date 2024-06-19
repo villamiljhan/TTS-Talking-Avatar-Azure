@@ -13,9 +13,6 @@ load_dotenv()
 # SUBSCRIPTION_KEY = os.getenv('SUBSCRIPTION_KEY')
 # SERVICE_REGION = os.getenv('SERVICE_REGION')
 
-SUBSCRIPTION_KEY = 'f13aae8580694ea9a1062b7fe8e08f7b'
-SERVICE_REGION = 'eastus'
-SERVICE_HOST = 'customvoice.api.speech.microsoft.com'
 # url = f'https://{SERVICE_REGION}.customvoice.api.speech.microsoft.com/api/texttospeech/3.1-preview1/batchsynthesis/talkingavatar?skip={skip}&top={top}'
 
 st.set_page_config(page_title="Talking Avatar", page_icon="🗣️",initial_sidebar_state="auto",layout='centered')
