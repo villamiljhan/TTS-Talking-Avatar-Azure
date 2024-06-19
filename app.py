@@ -10,8 +10,13 @@ logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(message)s", date
 logger = logging.getLogger(__name__)
 
 load_dotenv()
-SUBSCRIPTION_KEY = os.getenv('SUBSCRIPTION_KEY')
-SERVICE_REGION = os.getenv('SERVICE_REGION')
+# SUBSCRIPTION_KEY = os.getenv('SUBSCRIPTION_KEY')
+# SERVICE_REGION = os.getenv('SERVICE_REGION')
+
+SUBSCRIPTION_KEY = 'f13aae8580694ea9a1062b7fe8e08f7b'
+SERVICE_REGION = 'eastus'
+SERVICE_HOST = 'customvoice.api.speech.microsoft.com'
+# url = f'https://{SERVICE_REGION}.customvoice.api.speech.microsoft.com/api/texttospeech/3.1-preview1/batchsynthesis/talkingavatar?skip={skip}&top={top}'
 
 st.set_page_config(page_title="Talking Avatar", page_icon="🗣️",initial_sidebar_state="auto",layout='centered')
 NAME = "Text-to-Speech"
@@ -44,6 +49,7 @@ with st.sidebar:
     
 def submit_synthesis(text,voice,style):
     url = f'https://{SERVICE_REGION}.{SERVICE_HOST}/api/texttospeech/3.1-preview1/batchsynthesis/talkingavatar'
+    print(url)
     header = {
         'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY,
         'Content-Type':'application/json'
@@ -90,9 +96,10 @@ def get_content_from_url(decoded_url):
             return f"Error: Unable to retrieve content from URL. Status code: {response.status_code}"
     except Exception as e:
         return f"Error: {str(e)}"
-    
+
 def get_synthesis(job_id):
     url = f'https://{SERVICE_REGION}.{SERVICE_HOST}/api/texttospeech/3.1-preview1/batchsynthesis/talkingavatar/{job_id}'
+    print(url)
     header = {
         'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY
     }
