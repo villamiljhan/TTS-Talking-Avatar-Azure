@@ -1,6 +1,9 @@
 # Azure Text-to-Speech with Avatar
 [![Open in Streamlit](https://img.shields.io/badge/Open%20in-Streamlit-red?style=for-the-badge&logo=streamlit)](https://talking-avatar.streamlit.app/)
+## Demo
+Check out the demo video:
 
+https://github.com/Sgvkamalakar/Azure-Talking-Avatar/assets/103712713/adf5c293-e1cc-4fb5-94e2-b87ca5f5501c
 <p align="center">
   <img src="https://github.com/Sgvkamalakar/Azure-Talking-Avatar/assets/103712713/09fc79f9-cc68-4354-bae7-e75e24add235" width="400" height="400"/>
 </p>
